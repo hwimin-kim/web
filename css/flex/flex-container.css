@@ -1,0 +1,91 @@
+.container{
+    height: 100vh;
+    background: beige;
+    display: flex;
+
+    /*기준축 방향 및 아이템 순서
+      row: 왼쪽에서 오른쪽 
+      row-reverse: 오른쪽에서 왼쪽
+      column: 위에서 아래
+      column-reverse: 아래에서 위*/
+    flex-direction: row;
+
+    /*아이템을 박스 크기에 맞게 갯수를 나눌지 설정
+      nowrap: 아이템 갯수가 넘칠 경우 다음줄로 옮기지 않음(기본값)
+      wrap: 아이템 갯수가 넘칠 경우 다음줄로 옮김
+      wrap-reverse: 기준축(수평)일 경우 아래,
+                    기준축(수직)일 경우 오른쪽으로 변경*/
+    flex-wrap:wrap;
+
+    /* flex-flow = flex-direction + flex-wrap
+       flex-flow = row, wrap */
+
+    /* 기준축에서 아이템 덩어리 배치(순서는 관여하지 않는다.)
+       flex-start: 기준축 시작점 부터 배치(기본값)
+       center: 정 중앙 배치
+       flex-end: 기준축 끝에 배치
+       space-around: 아이템에 일정한 간격부여
+       space-evenly: 아이템 및 박스 간격 균등하게
+       space-between: 아이템 양 끝은 박스에 밀착 그 후 간격 균등하게*/
+    justify-content:flex-start;
+
+    /* 반대축에서 아이템 덩어리(박스) 배치
+       flex-start: 반대축 시작점 부터 배치(기본값)
+       center: 반대축 정 중앙 배치
+       flex-end: 반대축 끝에 배치
+       space-around, space-evenly, space-between
+       한줄에서는 효과가 없다. 즉flex-wrap:nowrap에서는 사용불가 */
+    align-content:center;
+     
+    /* 반대축에서 박스 내부의 아이템 배치
+       flex-start, center, flex-end
+       baseline: 아이템의 크기가 다를 경우 아이템의 콘텐트를 기준으로 정렬
+       */
+    align-items: flex-end;
+}
+
+.item{
+ width: 40px;
+ height: 40px;
+}
+
+.item1{
+   background:#ef9a9a ;
+}
+
+.item2{
+    background:#f48fb1 ;
+ }
+
+ .item3{
+    background: #ce93d8 ;
+ }
+
+ .item4{
+    background: #b39ddb ;
+ }
+
+ .item5{
+    background: #90caf9 ;
+ }
+
+ .item6{
+    background: #a5d6a7 ;
+ }
+
+ .item7{
+    background: #e6ee9c ;
+ }
+
+ .item8{
+    background: #fff350;
+ }
+
+ .item9{
+    background: #ffc947;
+ }
+
+ .item10{
+    background: #ffa270;
+ }
+

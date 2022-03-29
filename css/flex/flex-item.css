@@ -1,0 +1,47 @@
+.container{
+    height: 100vh;
+    background: beige;
+    display: flex;
+}
+
+.item{
+ width: 40px;
+ height: 40px;
+}
+
+.item1{
+   background:#ef9a9a ;
+ 
+   /* 아이템들의 순서
+      기본값은(0) */
+   order: 1;
+   
+   /* flex-grow: 늘어날 경우의 비율 유지 
+      기준축을 채울려고 한다.
+      기본값은(0) */
+   flex-grow: 2;
+
+   /* flex-shrink: 줄어들 경우의 비율 유지.
+      기본값은(0) */
+   flex-shrink: 4;
+   
+   /* flex-basis: 늘어나거나 줄어들때 퍼센트 비율로 유지
+      기본값은 auto */
+   flex-basis: auto;
+
+   /* 컨테이너에서 벗어나 아이템 하나에 대한 배치*/
+   align-self: auto;
+}
+
+.item2{
+    background:#f48fb1 ;
+    flex-grow: 1;
+    flex-shrink: 3;
+ }
+
+ .item3{
+    background: #ce93d8 ;
+    flex-grow: 1;
+    flex-shrink: 1;
+ }
+
