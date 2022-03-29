@@ -1,0 +1,116 @@
+:root {
+  /* size */
+  --font-size: 24px;
+
+  /* color */
+  --font-color: #d49466;
+  --backroung-color: #263343;
+
+  /* padding */
+  --item-incr-padding: 8px 12px;
+  --item-decr-padding: 8px 24px;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--item-incr-padding);
+  background-color: var(--backroung-color);
+}
+
+.navbar_logo {
+  font-size: var(--font-size);
+}
+
+.navbar_logo i {
+  color: var(--font-color);
+}
+
+.navbar_menu {
+  display: flex;
+  padding-left: 0;
+}
+
+.navbar_menu li {
+  padding: var(--item-incr-padding);
+}
+
+.navbar_menu li:hover {
+  background-color: var(--font-color);
+  border-radius: 4px;
+}
+
+.navbar_icons {
+  display: flex;
+  color: white;
+  padding-left: 0;
+}
+
+.navbar_icons li {
+  padding: var(--item-incr-padding);
+}
+
+.navbar_toggleBtn {
+  position: absolute;
+  right: var(--font-size);
+  font-size: var(--font-size);
+  color: var(--font-color);
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--item-decr-padding);
+  }
+
+  /*align-items: center 속성이 적용 안되는 이유는
+    navbar_menu 자체 넓이가 작기 때문에
+    width: 100%를 주면 적용된다. */
+  .navbar_menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    display: none;
+  }
+
+  /*리스트 아이템의 width: 100% 주면 자동적으로 왼쪽으로 
+    정렬되기 때문에 text-align: center 속성을 적용하여
+    다시 중앙으로 정렬 시키면 된다. */
+  .navbar_menu li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar_icons {
+    justify-content: center;
+    width: 100%;
+    display: none;
+  }
+
+  .navbar_toggleBtn {
+    display: block;
+  }
+  .navbar_menu.active,
+  .navbar_icons.active {
+    display: flex;
+  }
+}
